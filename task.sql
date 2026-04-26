@@ -15,11 +15,11 @@ CREATE TABLE GeoIPCache (
 ) ENGINE=MEMORY;
 
 CREATE TABLE ProductDescription (
-    ID INT AUTO_INCREMENT,
-    Description VARCHAR(255),
-    ProductID INT,
-    CountryID INT,
-    PRIMARY KEY (ID)
+ ID INT NOT NULL AUTO_INCREMENT,
+Description VARCHAR(255),
+ProductID INT NOT NULL,
+CountryID INT NOT NULL,
+PRIMARY KEY (ID)
 ) ENGINE=InnoDB;
 
 CREATE TABLE Logs (
