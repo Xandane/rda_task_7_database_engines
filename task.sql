@@ -25,7 +25,7 @@ CREATE TABLE ProductDescription (
 CREATE TABLE Logs (
     ID INT NOT NULL,
     `Timestamp` TIMESTAMP,
-    Message TEXT
+    Message VARCHAR(255)
 ) ENGINE=BLACKHOLE;
 
 CREATE TABLE ProductReporting (
