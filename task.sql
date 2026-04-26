@@ -22,11 +22,11 @@ DESCRIPTION VARCHAR(255),
 PRODUCTID INT,
 COUNTRYID INT,
 PRIMARY KEY (ID)
-) ENGINE=InnoDB;
+) ENGINE=MyISAM;
 -- Create a table for storing logs. For now we don't need to save them, but we need to implement functionality (Columns: ID, Time, LogRecord)
 CREATE TABLE Logs(
 ID INT NOT NULL ,
-Timestamp TIME,
+`Timestamp` TIME,
 Message VARCHAR(255),
 PRIMARY KEY (ID)
 ) ENGINE=Blackhole ;
