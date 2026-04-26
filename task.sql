@@ -1,6 +1,7 @@
 CREATE DATABASE ShopDB; 
 USE ShopDB; 
 
+
 CREATE TABLE Countries (
     ID INT,
     Name VARCHAR(50),
@@ -8,28 +9,28 @@ CREATE TABLE Countries (
 ) ENGINE=InnoDB;
 
 CREATE TABLE GeoIPCache (
-    ID INT NOT NULL AUTO_INCREMENT,
-    IPRange VARCHAR(50) NOT NULL,
-    CountryID INT NOT NULL,
+    ID INT,
+    IPRange VARCHAR(50),
+    CountryID INT,
     PRIMARY KEY (ID)
 ) ENGINE=MEMORY;
 
 CREATE TABLE ProductDescription (
- ID INT NOT NULL AUTO_INCREMENT,
-Description VARCHAR(255),
-ProductID INT NOT NULL,
-CountryID INT NOT NULL,
-PRIMARY KEY (ID)
+    ID INT,
+    Description VARCHAR(255),
+    ProductID INT,
+    CountryID INT,
+    PRIMARY KEY (ID)
 ) ENGINE=InnoDB;
 
 CREATE TABLE Logs (
-    ID INT NOT NULL,
-    `Timestamp` TIMESTAMP,
+    ID INT,
+    Timestamp TIMESTAMP,
     Message VARCHAR(255)
 ) ENGINE=BLACKHOLE;
 
 CREATE TABLE ProductReporting (
-    `Date` DATE NOT NULL,
-    ProductName VARCHAR(100) NOT NULL,
-    Orders INT NOT NULL
+    Date DATE,
+    ProductName VARCHAR(100),
+    Orders INT
 ) ENGINE=CSV;
