@@ -10,7 +10,7 @@ CREATE TABLE Countries (
 
 -- Create a table for caching GeoIP data (Columns: ID, IP Range, CountryID)
 CREATE TABLE GeoIPCache(
-ID INT NOT NULL,
+ID INT NOT NULL AUTO_INCREMENT,
 IPRANGE INT NOT NULL,
 COUNTRYID INT NOT NULL,
 PRIMARY KEY (ID)
