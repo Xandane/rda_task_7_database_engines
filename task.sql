@@ -3,7 +3,7 @@ USE ShopDB;
 
 -- Create a table to store countries 
 CREATE TABLE Countries (
-    ID INT,
+    ID INT AUTO_INCREMENT,
     Name VARCHAR(50),
     PRIMARY KEY (ID)
 ) ENGINE=InnoDB;
@@ -11,7 +11,7 @@ CREATE TABLE Countries (
 
 -- Create a table for caching GeoIP data (Columns: ID, IP Range, CountryID)
 CREATE TABLE GeoIPCache (
-    ID INT NOT NULL,
+    ID INT AUTO_INCREMENT NOT NULL,
     IPRange VARCHAR(50) NOT NULL,
     CountryID INT NOT NULL,
     PRIMARY KEY (ID)
@@ -20,7 +20,7 @@ CREATE TABLE GeoIPCache (
 
 -- Create a table for storing product descriptions for different countries (Columns: ID, CountryID, ProductID, Description )
 CREATE TABLE ProductDescription (
-    ID INT,
+    ID INT AUTO_INCREMENT,
     CountryID INT,
     ProductID INT,
     Description VARCHAR(255),
@@ -30,7 +30,7 @@ CREATE TABLE ProductDescription (
 
 -- Create a table for storing logs. For now we don't need to save them, but we need to implement functionality (Columns: ID, Time, LogRecord)
 CREATE TABLE Logs (
-    ID INT NOT NULL,
+    ID INT AUTO_INCREMENT NOT NULL,
     `Timestamp` TIMESTAMP NOT NULL,
     Message VARCHAR(255) NOT NULL
 ) ENGINE=BLACKHOLE;
