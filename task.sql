@@ -25,14 +25,14 @@ CREATE TABLE ProductDescription (
     ProductID INT,
     Description VARCHAR(255),
     PRIMARY KEY (ID)
-) ENGINE=MEMORY;
+) ENGINE=InnoDB;
 
 
 -- Create a table for storing logs. For now we don't need to save them, but we need to implement functionality (Columns: ID, Time, LogRecord)
 CREATE TABLE Logs (
     ID INT,
-    Time TIMESTAMP,
-    LogRecord VARCHAR(255)
+    `Timestamp` TIMESTAMP,
+    Message VARCHAR(255)
 ) ENGINE=BLACKHOLE;
 
 
